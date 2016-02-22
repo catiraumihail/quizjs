@@ -1,6 +1,14 @@
-(function() {
-    // Definition of caller element
-    var getTriggerElement = function(el) {
+function hasClass(element, className) {
+    return element.className && new RegExp("(^|\\s)" + className + "(\\s|$)").test(element.className);
+}
+
+Element.prototype.hasClass = function(className) {
+    return this.className && new RegExp("(^|\\s)" + className + "(\\s|$)").test(this.className);
+};
+
+(function() {    
+    
+    var getCollapseElement = function(el) {
         var isCollapse = el.getAttribute('data-collapse');
         if (isCollapse !== null) {
             return el;
@@ -9,21 +17,41 @@
             return (isParentCollapse !== null) ? el.parentNode : undefined;
         }
     };
-    // A handler for click on toggle button
+    
     var collapseClickHandler = function(event) {
-        var triggerEl = getTriggerElement(event.target);
-        // If trigger element does not exist
+        var triggerEl = getCollapseElement(event.target);
         if (triggerEl === undefined) {
             event.preventDefault();
             return false;
         }
-        // If the target element exists
         var targetEl = document.querySelector(triggerEl.getAttribute('data-target'));
         if (targetEl) {
             triggerEl.classList.toggle('active');
             targetEl.classList.toggle('on');
         }
     };
-    // Delegated event
+    
     document.addEventListener('click', collapseClickHandler, false);
+    
+    var getActiveMenuElement = function(el) {
+        var isActive = el.getElementsByClassName('nav-link active');
+        return (isActive !== null) ? isActive: undefined;        
+    }
+    
+    var navbarClickHandler = function(event) {
+        var triggerEl = event.target;
+        if (triggerEl != undefined) {
+            if(triggerEl.hasClass('nav-link')){
+                var parentEl = triggerEl.parentNode;
+                var active = getActiveMenuElement(parentEl); 
+                if (active != undefined) {
+                    active[0].classList.remove("active");
+                }
+                triggerEl.classList.add("active");
+            }            
+        }
+    }
+    
+    document.addEventListener('click', navbarClickHandler, false);
+    
 })(document, window);
