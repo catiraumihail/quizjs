@@ -1,0 +1,42 @@
+{
+  'html':{
+    'name': 'Html quizes',
+    'description': 'Basic html questions',
+    'questions': {
+        {
+          'question': 'Html se descifreaza ca Hyper Text Markup Language',
+          'answers' : {
+              {
+                'text': 'Correct',
+                'correct': true,
+              },
+              {
+                'text': 'Fals',
+                'correct': false,
+              },
+              {
+                'text': 'Foarte fals',
+                'correct': false,
+              }
+          }
+        },
+        {
+          'question': 'Html se descifreaza ca Hyper Text Markup Language',
+          'answers' : {
+            {
+              'text': 'Correct',
+              'correct': true,
+            },
+            {
+              'text': 'Fals',
+              'correct': false,
+            },
+            {
+              'text': 'Foarte fals',
+              'correct': false,
+            }
+          }
+        }
+    }
+  }
+}
