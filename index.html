@@ -19,26 +19,26 @@
                 <a href="#/quizes" class="nav-item nav-link">Quizes</a>
                 <a href="#/contact" class="nav-item nav-link">Contact</a>
                 <a href="#/about" class="nav-item nav-link">About me</a>
-                <div class="nav-item nav-search">
-                    <div class="form-group">
-                        <div class="input-group">
-                            <input id="search" class="form-control" type="text" name="search" >
-                            <button class="input-addon btn btn-default"><span class="oi" data-glyph="magnifying-glass"></span></button>
-                        </div>
-                    </div>
-                </div>
             </nav>
         </div>
     </div>
     <div class="wrap">
         <div class="container">
             <div class="row">
-                <div class="col-md-8 col-xs-12">
+                <div class="col-md-9 col-xs-12">
                     <div class="fadeInLeft" ng-view></div>
                 </div>
-                <div class="col-md-4 col-xs-12">
+                <div class="col-md-3 col-xs-12">
                     <div class="content-box">
-                    Sidebar
+                        <div class="box-search">
+                            <div class="form-group">
+                                <label for="search">Search</label>
+                                <div class="input-group">
+                                    <input id="search" class="form-control" type="text" name="search" >
+                                    <button class="input-addon btn btn-default"><span class="oi" data-glyph="magnifying-glass"></span></button>
+                                </div>
+                            </div>
+                        </div>
                     </div>                
                 </div>
             </div>
