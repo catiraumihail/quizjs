@@ -1,4 +1,4 @@
-var app = angular.module('QuizApp', ['ngRoute']);
+var app = angular.module('QuizApp', ['ngRoute','ngAnimate']);
 
 app.config(function($routeProvider) {
     $routeProvider

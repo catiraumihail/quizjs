@@ -1,16 +1,18 @@
 <div ng-controller="contactCtrl">
-    <h2 class="page-title">Contact me</h2>
-    <div>
-        <div class="form-group">
-            <label class="form-label" for="contact_name">Name</label>
-            <input id="contact_name" class="form-control" ng-model="contactForm.name" type="text" name="name"> {{contactForm.name}}
-        </div>
-        <div class="form-group">
-            <label class="form-label" for="contact_message">Message</label>
-            <textarea id="contact_message" class="form-control" ng-model="contactForm.message" name="message"></textarea> {{contactForm.message}}
-        </div>
-        <div class="form-group text-right">
-            <button class="btn btn-primary">Send</button>
+    <div class="content-box">
+        <h2 class="page-title">Contact me</h2>
+        <div>
+            <div class="form-group">
+                <label class="form-label" for="contact_name">Name</label>
+                <input id="contact_name" class="form-control" ng-model="contactForm.name" type="text" name="name"> {{contactForm.name}}
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="contact_message">Message</label>
+                <textarea id="contact_message" class="form-control" ng-model="contactForm.message" name="message"></textarea> {{contactForm.message}}
+            </div>
+            <div class="form-group text-right">
+                <button class="btn btn-primary">Send</button>
+            </div>
         </div>
     </div>
 </div>
