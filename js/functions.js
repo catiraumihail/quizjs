@@ -35,7 +35,7 @@ Element.prototype.hasClass = function(className) {
     
     var getActiveMenuElement = function(el) {
         var isActive = el.getElementsByClassName('nav-link active');
-        return (isActive !== null) ? isActive: undefined;        
+        return (isActive.length > 0) ? isActive: undefined;        
     }
     
     var navbarClickHandler = function(event) {
@@ -43,7 +43,7 @@ Element.prototype.hasClass = function(className) {
         if (triggerEl != undefined) {
             if(triggerEl.hasClass('nav-link')){
                 var parentEl = triggerEl.parentNode;
-                var active = getActiveMenuElement(parentEl); 
+                var active = getActiveMenuElement(parentEl);
                 if (active != undefined) {
                     active[0].classList.remove("active");
                 }

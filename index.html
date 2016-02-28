@@ -12,10 +12,11 @@
         <div class="navbar-container">
             <h1 class="brand">Quizes</h1>
             <nav id="navigation" role="navigation" class="nav-list">
-                <a href="#/home" class="nav-item nav-link active">Home</a>
-                <a href="#/quizes" class="nav-item nav-link">Quizes</a>
-                <a href="#/contact" class="nav-item nav-link">Contact</a>
-                <a href="#/about" class="nav-item nav-link">About me</a>
+                <a href="#/" ng-class="menuActive('/',true)" class="nav-item nav-link">Home</a>
+                <a href="#/quizes" ng-class="menuActive('/quizes')" class="nav-item nav-link">Quizes</a>
+                <a href="#/contact" ng-class="menuActive('/contact',true)" class="nav-item nav-link">Contact</a>
+                <a href="#/about" ng-class="menuActive('/about',true)" class="nav-item nav-link">About me</a>
+                <a href="#/map" ng-class="menuActive('/map',true)" class="nav-item nav-link">Map</a>
             </nav>
             <button data-collapse data-target="#navigation" class="toggle">
                 <span class="icon"></span>
@@ -54,5 +55,8 @@
     <script src="js/angular/angular-animate.min.js"></script>
     <script src="js/functions.js"></script>
     <script src="js/app.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3&sensor=false&key=AIzaSyCvLPZzoER0JluPpVyx9dQfSS84eqXQgQ4" async></script>
+    <script src="js/V3_epoly.js" async></script>
+    <script src="js/markerwithlabel.js" async></script>
 </body>
 </html>
